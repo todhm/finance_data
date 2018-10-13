@@ -10,9 +10,9 @@ class BankDataTest(unittest.TestCase):
 
     def test_bank_data_properly(self):
         data = self.bh.get_daily_stats(
-            '20160103', '20181001', '060Y001', '010300000')
-        self.assertTrue(len(data['회사채(3년,AA-)']) > 500)
-        self.assertTrue(len(data['date']) > 500)
+            '20170103', '20181001', '060Y001', '010300000')
+        self.assertTrue(len(data['회사채(3년,AA-)']) > 100)
+        self.assertTrue(len(data['date']) > 100)
 
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@ import unittest
 from invest_strategy.invest_strategy_handler import InvestStrategyHandler
 import pandas as pd
 
+
 class StrategyTest(unittest.TestCase):
 
     def setUp(self):
@@ -11,9 +12,9 @@ class StrategyTest(unittest.TestCase):
 
     def test_interest_strategy(self):
         result = self.ish.find_expected_interest(
-            self.df, self.df.index[0], self.df.index[-1]
+            self.df, self.df.index[0], self.df.index[-2]
         )
-        self.assertTrue(str(result).isdigit())
+        self.assertEqual(type(result), float)
 
 
 
